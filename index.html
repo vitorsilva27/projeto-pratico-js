@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de pessoas</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Cadastro de Pessoas</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">
+            Cadastrar Pessoa
+          </button>
+          <table id="tablePeople" class="records">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Genero</th>
+                <th>Esta no Local</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                  <header class="modal-header">
+                    <h2>Nova Pessoa</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                  </header>
+                  <form id="form" class="modal-form">
+                    <input 
+                      id="name"
+                      data-index="new"
+                      type="text"
+                      class="modal-field"
+                      placeholder="Nome da Pessoa"
+                      required
+                    />
+                    <input
+                      id="age"
+                      type="text"
+                      class="modal-field"
+                      placeholder="Idade da Pessoa"
+                      required
+                    />
+                    <input
+                      id="gender"
+                      type="text"
+                      class="modal-field"
+                      placeholder="Genero"
+                      required
+                    />
+                    <input
+                      id="place"
+                      type="text"
+                      class="modal-field"
+                      placeholder="Esta no Local"
+                      required
+                    />
+                  </form>
+                  <footer class="modal-footer">
+                    <button id="save" class="button green">Salvar</button>
+                    <button id="cancel" class="button blue">Cancelar</button>
+                  </footer>
+                </div>
+        </table>
+    </main>
+  </body>
+  <script src="js/script.js"></script>
+</html>
