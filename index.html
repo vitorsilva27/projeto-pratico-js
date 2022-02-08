@@ -12,9 +12,12 @@
       <h1 class="header-title">Cadastro de Pessoas</h1>
     </header>
     <main>
-        <button type="button" class="button blue mobile" id="cadastrarCliente">
-            Cadastrar Pessoa
-          </button>
+      <button type="button" class="button blue mobile" id="registerPerson">
+        Cadastrar Pessoa
+      </button>
+      <button type="button" class="button blue mobile" id="generateReport">
+        Gerar Relatorio
+      </button>
           <table id="tablePeople" class="records">
             <thead>
               <tr>
@@ -26,12 +29,12 @@
               </tr>
             </thead>
             <tbody>
-
+            
             </tbody>
             <div class="modal" id="modal">
-                <div class="modal-content">
-                  <header class="modal-header">
-                    <h2>Nova Pessoa</h2>
+              <div class="modal-content">
+                <header class="modal-header">
+                  <h2>Nova Pessoa</h2>
                     <span class="modal-close" id="modalClose">&#10006;</span>
                   </header>
                   <form id="form" class="modal-form">
@@ -71,6 +74,9 @@
                   </footer>
                 </div>
         </table>
+        <div class="report" id="report">
+          
+        </div>
     </main>
   </body>
   <script src="js/script.js"></script>

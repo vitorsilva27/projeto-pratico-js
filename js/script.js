@@ -1,12 +1,15 @@
 "use strict";
 
 const openModal = () =>
-  document.getElementById("modal").classList.add("active");
+document.getElementById("modal").classList.add("active");
 
 const closeModal = () => {
   clearFields();
   document.getElementById("modal").classList.remove("active");
 };
+
+const modalReport = () => 
+document.getElementById("report").classList.toggle("hide")
 
 // Pegar
 const getLocalStorage = () =>
@@ -87,7 +90,7 @@ const createRow = (people, index) => {
 };
 
 const clearTable = () => {
-  const rows = document.querySelectorAll("tablePeople>tbody tr");
+  const rows = document.querySelectorAll("#tablePeople>tbody tr");
   rows.forEach((row) => row.parentNode.removeChild(row));
 };
 
@@ -132,14 +135,14 @@ const editDelete = (event) => {
 updateTable();
 
 // EVENTOS
-document
-  .getElementById("cadastrarCliente")
-  .addEventListener("click", openModal);
+document.getElementById("registerPerson").addEventListener("click", openModal);
+
+document.getElementById("generateReport").addEventListener("click", modalReport);
 
 document.getElementById("modalClose").addEventListener("click", closeModal);
 
+document.getElementById("cancel").addEventListener("click", closeModal);
+
 document.getElementById("save").addEventListener("click", savePeople);
 
-document
-  .querySelector("#tablePeople>tbody")
-  .addEventListener("click", editDelete);
+document.querySelector("#tablePeople>tbody").addEventListener("click", editDelete);
